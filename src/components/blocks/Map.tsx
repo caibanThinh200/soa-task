@@ -186,14 +186,15 @@ const Map: React.FC<MapProps> = ({ data, mark }) => {
             {selectedMark?.website && (
               <DialogDescription className="flex gap-2">
                 <span className="w-1/6">Website:</span>
-                <Link
+                <a
                   rel="noopener noreferrer"
                   target="_blank"
-                  href={selectedMark?.website}
+                  href={`//${selectedMark?.website}`}
+                  // passHref
                   className="font-medium text-blue-500 w-5/6"
                 >
                   {selectedMark?.website}
-                </Link>
+                </a>
               </DialogDescription>
             )}
             {selectedMark?.phone && (

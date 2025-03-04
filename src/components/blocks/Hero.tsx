@@ -11,7 +11,7 @@ interface HeroProps {
 const Hero: React.FC<HeroProps> = ({ data }) => {
   const icons = ["/svg/mountain.svg", "/svg/whale.svg", "/svg/aim.svg"];
   return (
-    <div className="relative lg:h-[100vh] h-screen">
+    <div className="relative lg:h-[100vh] h-[100vh]">
       <div className="absolute w-full h-full inset-0">
         <video
           controls={false}
