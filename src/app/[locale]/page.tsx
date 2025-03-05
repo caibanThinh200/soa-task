@@ -3,7 +3,9 @@ import { getPageLang } from "@/lib/api/lang";
 import Image from "next/image";
 import Chat from "@/components/ui/Chat";
 
-const Booking = dynamic(() => import("@/components/blocks/Booking"));
+const Booking = dynamic(() => import("@/components/blocks/Booking"), {
+  ssr: true,
+});
 const Hero = dynamic(() => import("@/components/blocks/Hero"));
 const Cards = dynamic(() => import("@/components/blocks/Cards"));
 const Map = dynamic(() => import("@/components/blocks/Map"));

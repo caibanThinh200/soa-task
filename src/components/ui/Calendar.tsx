@@ -109,7 +109,6 @@ const CalendarComponent = ({ events, updateEvents }: CalendarProps) => {
     ]);
   };
 
-  console.log(events);
   return (
     <div className="md:h-[700px] h-[500px] md:p-10 p-2 border border-brown-coffee/30 shadow-brown-coffee/10 shadow-xl rounded-2xl">
       <Calendar

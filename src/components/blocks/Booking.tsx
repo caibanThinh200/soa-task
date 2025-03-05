@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import CalendarComponent from "../ui/Calendar";
-import CustomEditor from "../ui/Editor";
 import { Paperclip, Sent } from "../ui/Icons";
 import Input from "../ui/Input";
 import Link from "next/link";
@@ -13,6 +12,11 @@ import { Event } from "react-big-calendar";
 import AnimatedBlock from "../ui/Animated";
 import { useForm } from "react-hook-form";
 import Image from "next/image";
+import dynamic from "next/dynamic";
+
+const CustomEditor = dynamic(() => import("../ui/Editor"), {
+  ssr: false,
+});
 
 interface BookingProps {
   data: Page["bloc_2_2"];
@@ -41,7 +45,6 @@ const Booking: React.FC<BookingProps> = ({ data }) => {
       const data = (await axios.post("/api/upload", formData)) as {
         data: { url: string };
       };
-      console.log(data);
       if (data?.data?.url) {
         setPreviewUrl(data?.data?.url);
       }
@@ -55,7 +58,6 @@ const Booking: React.FC<BookingProps> = ({ data }) => {
   const onSubmit = async (data: any) => {
     try {
       // const response = await axios.post("/api/booking", data);
-      console.log(data);
     } catch (error) {
       console.error("Error creating event:", error);
     }
