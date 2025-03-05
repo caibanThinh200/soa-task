@@ -22,7 +22,7 @@ export default async function Home({
   return (
     <main>
       <Chat />
-      <Hero data={pageData?.banner_title} />
+      <Hero data={pageData?.banner_menu} />
       <Cards data={pageData?.bloc_1} />
       <Map mark={pageData?.carte_point} data={pageData?.bloc_2} />
       <Booking data={pageData?.bloc_2_2} />

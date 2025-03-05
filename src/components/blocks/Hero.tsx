@@ -51,7 +51,7 @@ const Hero: React.FC<HeroProps> = ({ data }) => {
                   damping: 20,
                   delay: 0.2 * (index + 1),
                 }}
-                className="flex flex-col gap-2 items-center cursor-pointer group"
+                className="flex flex-1 flex-col gap-2 items-center cursor-pointer group"
               >
                 <Image
                   src={icons[index]}
